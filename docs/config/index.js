@@ -28,7 +28,8 @@ module.exports = function(outputFolder, sourceFiles, exampleJs, exampleCss, root
     var dgeniPackage = new Package('angularjs', [
         require('dgeni-packages/ngdoc'),
         require('dgeni-packages/nunjucks'),
-        require('dgeni-packages/examples')
+        require('dgeni-packages/examples'),
+        require('dgeni-packages/typescript')
     ])
     .factory(require('./services/errorNamespaceMap'))
     //default deployment
@@ -54,6 +55,10 @@ module.exports = function(outputFolder, sourceFiles, exampleJs, exampleCss, root
         readFilesProcessor.sourceFiles = sourceFiles;
         writeFilesProcessor.outputFolder = outputFolder;
 
+    })
+
+    .config(function(readTypeScriptModules) {
+        readTypeScriptModules.sourceFiles = ['src/**/*.ts'];
     })
 
 

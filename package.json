@@ -15,7 +15,7 @@
   "dependencies": {
     "canonical-path": "0.0.2",
     "dgeni": "^0.4.1",
-    "dgeni-packages": "^0.11.1",
+    "dgeni-packages": "^0.13.0",
     "globby": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-rimraf": "^0.2.0",
